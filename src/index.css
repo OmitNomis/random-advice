@@ -3,6 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"),
+    url("./assets/fonts/Inter/Inter-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter-Black";
+  src: local("Inter-Black"),
+    url("./assets/fonts/Inter/Inter-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter-ExtraBold";
+  src: local("Inter-ExtraBold"),
+    url("./assets/fonts/Inter/Inter-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: local("Inter-Bold"),
+    url("./assets/fonts/Inter/Inter-Bold.ttf") format("truetype");
+}
 
 @tailwind base;
 @tailwind components;
