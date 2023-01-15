@@ -10,6 +10,9 @@ function App() {
         <img
           src={Background}
           alt=""
+          onContextMenu={(e) => e.preventDefault()}
+          onDragStart={(e) => e.preventDefault()}
+          draggable={false}
           className="fixed h-full w-full opacity-50 -z-1"
         />
 

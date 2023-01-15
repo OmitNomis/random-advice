@@ -23,6 +23,13 @@
   src: local("Inter-Bold"),
     url("./assets/fonts/Inter/Inter-Bold.ttf") format("truetype");
 }
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
 
 @tailwind base;
 @tailwind components;
