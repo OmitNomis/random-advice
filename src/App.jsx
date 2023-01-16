@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Background from "./assets/images/background.jfif";
 import { motion } from "framer-motion";
+import Button from "./components/Button";
 
 function App() {
   const [showAdvice, setShowAdvice] = useState(false);
@@ -43,15 +44,13 @@ function App() {
             Ready for taste of mediocrity? Press the button for a little
             surprise.
           </motion.h2>
-
-          <motion.button
+          <motion.div
             initial={{ y: "-100vh", opacity: 0.5 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 3 }}
-            className="text-white bg-[#2D0EC6] p-1 px-3 rounded-[8px] flex justify-center items-center"
           >
-            <p>Why not?</p>
-          </motion.button>
+            <Button title={"Why not?"} />
+          </motion.div>
         </div>
       </div>
       {showAdvice === true && (
