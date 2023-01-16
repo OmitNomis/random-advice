@@ -17,20 +17,6 @@ function App() {
     const response = await fetch("https://api.adviceslip.com/advice");
     const data = await response.json();
     advice.current = data.slip.advice;
-
-    fetch("https://askbuddha.ai/api/chat", {
-      method: "POST",
-      body: JSON.stringify({
-        text: "hi",
-        chats: [],
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.error(error));
   };
   function toggleShowAdvice() {
     setShowAdvice(!showAdvice);
