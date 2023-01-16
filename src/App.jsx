@@ -25,7 +25,7 @@ function App() {
     getNewAdvice();
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 750);
   };
 
   return (
@@ -38,7 +38,7 @@ function App() {
         draggable={false}
         className="fixed h-full w-full opacity-50 -z-1"
       />
-      <AnimatePresence mode="wait" initial="false">
+      <AnimatePresence mode="wait">
         {showAdvice === false ? (
           <FirstPage toggleScreen={toggleShowAdvice} key="first" />
         ) : (
