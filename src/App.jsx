@@ -6,6 +6,7 @@ import SecondPage from "./components/SecondPage";
 
 function App() {
   const [showAdvice, setShowAdvice] = useState(false);
+  const [loading, setLoading] = useState(false);
   const advice = useRef(null);
   useEffect(() => {
     getNewAdvice();
@@ -15,11 +16,17 @@ function App() {
     const response = await fetch("https://api.adviceslip.com/advice");
     const data = await response.json();
     advice.current = data.slip.advice;
-    console.log(data);
   };
   function toggleShowAdvice() {
     setShowAdvice(!showAdvice);
   }
+  const showNewAdvice = () => {
+    setLoading(true);
+    getNewAdvice();
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
+  };
 
   return (
     <>
@@ -35,11 +42,13 @@ function App() {
         {showAdvice === false ? (
           <FirstPage toggleScreen={toggleShowAdvice} key="first" />
         ) : (
-          <SecondPage
-            toggleScreen={toggleShowAdvice}
-            key="second"
-            advice={advice.current}
-          />
+          loading === false && (
+            <SecondPage
+              toggleScreen={showNewAdvice}
+              key="second"
+              advice={advice.current}
+            />
+          )
         )}
       </AnimatePresence>
     </>
