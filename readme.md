@@ -35,7 +35,9 @@ npm run build
 ## Dependencies
 
 react: version 18.2.0
+
 react-dom: version 18.2.0
+
 framer-motion: version 8.4.3
 
 ## Contributing
