@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+<svg width="21" height="38" viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="8" y="1" width="5" height="37" rx="2.5" fill="#2D0EC6"/>
+<rect x="8" y="2.63461" width="4" height="14.3119" rx="2" transform="rotate(-41.1971 8 2.63461)" fill="#2D0EC6"/>
+<rect width="4" height="14.3119" rx="2" transform="matrix(-0.752448 -0.658652 -0.658652 0.752448 12.4363 2.63461)" fill="#2D0EC6"/>
 </svg>

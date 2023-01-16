@@ -44,7 +44,8 @@ function App() {
         ) : (
           loading === false && (
             <SecondPage
-              toggleScreen={showNewAdvice}
+              toggleScreen={toggleShowAdvice}
+              newAdvice={showNewAdvice}
               key="second"
               advice={advice.current}
             />

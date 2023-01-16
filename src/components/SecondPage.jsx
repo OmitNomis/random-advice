@@ -1,8 +1,9 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Arrow from "../assets/icons/uparrow.svg";
 import Button from "./Button";
 
-function SecondPage({ toggleScreen, advice }) {
+function SecondPage({ toggleScreen, advice, newAdvice }) {
   return (
     <motion.div
       initial={{ y: "100vh", opacity: 0 }}
@@ -23,7 +24,7 @@ function SecondPage({ toggleScreen, advice }) {
           Think this advice is 'meh'? Test your luck again!
         </h2>
         <div>
-          <Button title={"Another Spin"} onClick={toggleScreen} />
+          <Button title={"Another Spin"} onClick={newAdvice} />
         </div>
       </div>
     </motion.div>
