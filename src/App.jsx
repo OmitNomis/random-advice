@@ -1,8 +1,9 @@
-import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import Background from "./assets/images/background.jfif";
 import FirstPage from "./components/FirstPage";
 import SecondPage from "./components/SecondPage";
+import BackButton from "./components/BackButton";
 
 function App() {
   const [showAdvice, setShowAdvice] = useState(false);
@@ -38,6 +39,9 @@ function App() {
         draggable={false}
         className="fixed h-full w-full opacity-50 -z-1"
       />
+      <AnimatePresence>
+        {showAdvice === true && <BackButton onClick={toggleShowAdvice} />}
+      </AnimatePresence>
       <AnimatePresence mode="wait">
         {showAdvice === false ? (
           <FirstPage toggleScreen={toggleShowAdvice} key="first" />
