@@ -24,6 +24,7 @@
     url("./assets/fonts/Inter/Inter-Bold.ttf") format("truetype");
 }
 body {
+  font: 400 16px "Inter", sans-serif;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
