@@ -1,3 +1,4 @@
+import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import React, { useState } from "react";
 import Background from "./assets/images/background.jfif";
 import FirstPage from "./components/FirstPage";
@@ -20,12 +21,13 @@ function App() {
         draggable={false}
         className="fixed h-full w-full opacity-50 -z-1"
       />
-
-      {showAdvice === false ? (
-        <FirstPage toggleScreen={toggleShowAdvice} />
-      ) : (
-        <SecondPage toggleScreen={toggleShowAdvice} />
-      )}
+      <AnimatePresence mode="wait" initial="false">
+        {showAdvice === false ? (
+          <FirstPage toggleScreen={toggleShowAdvice} key="first" />
+        ) : (
+          <SecondPage toggleScreen={toggleShowAdvice} key="second" />
+        )}
+      </AnimatePresence>
     </>
   );
 }
